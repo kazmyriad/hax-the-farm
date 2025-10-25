@@ -9,10 +9,10 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
  * @element calender-date
  */
 
-export class CalenderDate extends DDDSuper(I18NMixin(LitElement)) {
+export class LocationSelector extends DDDSuper(I18NMixin(LitElement)) {
 
   static get tag() {
-    return "calender-date";
+    return "location-selector";
   }
 
   constructor() {
@@ -26,7 +26,7 @@ export class CalenderDate extends DDDSuper(I18NMixin(LitElement)) {
     this.registerLocalization({
       context: this,
       localesPath:
-        new URL("./locales/calender-date.ar.json", import.meta.url).href +
+        new URL("./locales/location-selector.ar.json", import.meta.url).href +
         "/../",
       locales: ["ar", "es", "hi", "zh", "pt", "bn", "ru", "fr", "ja"],
     });
@@ -80,53 +80,6 @@ export class CalenderDate extends DDDSuper(I18NMixin(LitElement)) {
   render() {
     return html`
         <div class="wrapper">
-            <table>
-                <tr>
-                    <th>.</th>
-                    <th>.</th>
-                    <th>YESTERDAY</th>
-                    <th>TODAY</th>
-                    <th>TOMORROW</th>
-                    <th>.</th>
-                    <th>.</th>
-                </tr>
-                <tr>
-                    <td>DATE</td>
-                    <td>DATE</td>
-                    <td>DATE</td>
-                    <td>DATE</td>
-                    <td>DATE</td>
-                    <td>DATE</td>
-                    <td>DATE</td>
-                </tr>
-                <tr>
-                    <td>temp</td>
-                    <td>temp</td>
-                    <td>temp</td>
-                    <td>temp</td>
-                    <td>temp</td>
-                    <td>temp</td>
-                    <td>temp</td>
-                </tr>
-                <tr>
-                    <td>humidity</td>
-                    <td>humidity</td>
-                    <td>humidity</td>
-                    <td>humidity</td>
-                    <td>humidity</td>
-                    <td>humidity</td>
-                    <td>humidity</td>
-                </tr>
-                <tr>
-                    <td>rainfall</td>
-                    <td>rainfall</td>
-                    <td>rainfall</td>
-                    <td>rainfall</td>
-                    <td>rainfall</td>
-                    <td>rainfall</td>
-                    <td>rainfall</td>
-                </tr>
-            </table>
         </div>
         
         `;}
@@ -140,4 +93,4 @@ export class CalenderDate extends DDDSuper(I18NMixin(LitElement)) {
   }
 }
 
-globalThis.customElements.define(CalenderDate.tag, CalenderDate);
+globalThis.customElements.define(LocationSelector.tag, LocationSelector);
